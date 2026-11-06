@@ -13,7 +13,6 @@
  * - Kept the volume icon visible for players without mute support.
  * - Matched the non-mute volume indicator to the same `ha-icon-button` structure as the control buttons.
  * - Adopted Home Assistant's media-player volume-control layout and sizing.
- * - Vertically aligned the volume slider track with the control buttons.
  * - Added an optional `show_media_title` now-playing title that maps matching station URLs, `keys=` values, or media filenames to configured names.
  * - Grouped the now-playing title and media controls into a compact inline media-player row.
  */
@@ -575,9 +574,7 @@ class JukeboxCard extends HTMLElement {
       .jukebox-volume-slider-container ha-slider {
         width: 100%;
         min-width: 100px;
-        transform: translateY(6px);
       }
-
 
       .jukebox-volume ha-icon-button {
         --ha-icon-button-size: 32px;
@@ -602,7 +599,6 @@ class JukeboxCard extends HTMLElement {
         display: flex;
         align-items: center;
         flex: 0 1 34%;
-        transform: translateY(5px);
         max-width: 34%;
         min-width: 0;
         min-height: 40px;
@@ -625,7 +621,6 @@ class JukeboxCard extends HTMLElement {
       .jukebox-media-player > .jukebox-media-row {
         flex: 1 1 auto;
         width: 100%;
-        transform: translateY(-2px);
       }
 
       .jukebox-media-player.with-title > .jukebox-media-row {
